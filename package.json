@@ -15,9 +15,9 @@
     ],
     "keybindings": [
       {
-        "when": "editorTextFocus",
+        "command": "bennycode.sort-everything.sortFile",
         "key": "alt+shift+l",
-        "command": "bennycode.sort-everything.sortFile"
+        "when": "editorTextFocus"
       }
     ]
   },
