@@ -26,7 +26,7 @@
     "json5": "^2.2.1",
     "jsonabc": "^2.3.1"
   },
-  "description": "sorts actively opened JSON files by pressing \"Alt\" + \"Shift\" + \"L\".",
+  "description": "Sorts actively opened JSON files by pressing \"Alt\" + \"Shift\" + \"L\".",
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
