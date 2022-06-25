@@ -1,0 +1,6 @@
+out
+dist
+node_modules
+.idea/
+.vscode-test/
+*.vsix
