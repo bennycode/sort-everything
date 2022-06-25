@@ -22,11 +22,13 @@
     ]
   },
   "dependencies": {
+    "@types/js-yaml": "^4.0.5",
     "@types/jsonabc": "^2.3.1",
+    "js-yaml": "^4.1.0",
     "json5": "^2.2.1",
     "jsonabc": "^2.3.1"
   },
-  "description": "Sorts actively opened JSON files by pressing \"Alt\" + \"Shift\" + \"L\".",
+  "description": "Sorts JSON, YAML and plain text files by pressing a hotkey (default: \"Alt\" + \"Shift\" + \"L\").",
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
@@ -62,6 +64,10 @@
   "keywords": [
     "sorting",
     "sort",
+    "yaml",
+    "yml",
+    "plaintext",
+    "text",
     "json",
     "lines",
     "code"
@@ -85,5 +91,5 @@
     "vscode:prepublish": "yarn run package",
     "watch": "webpack --watch"
   },
-  "version": "0.0.1"
+  "version": "1.0.0"
 }

@@ -1,31 +1,19 @@
 {
-  "ignorePatterns": [
-    "out",
-    "dist",
-    "**/*.d.ts"
-  ],
+  "ignorePatterns": ["out", "dist", "**/*.d.ts"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 8,
     "project": "./tsconfig.json",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "typescript-sort-keys",
-    "prettier",
-    "sort-keys-fix",
-    "unused-imports"
-  ],
+  "plugins": ["@typescript-eslint", "typescript-sort-keys", "prettier", "sort-keys-fix", "unused-imports"],
   "root": true,
   "rules": {
     "@typescript-eslint/array-type": "error",
     "@typescript-eslint/consistent-type-assertions": "error",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/member-ordering": "off",
-    "@typescript-eslint/no-dupe-class-members": [
-      "error"
-    ],
+    "@typescript-eslint/no-dupe-class-members": ["error"],
     "@typescript-eslint/no-floating-promises": [
       "error",
       {
@@ -33,17 +21,12 @@
       }
     ],
     "@typescript-eslint/no-namespace": "off",
-    "@typescript-eslint/no-redeclare": [
-      "error"
-    ],
+    "@typescript-eslint/no-redeclare": ["error"],
     "@typescript-eslint/no-this-alias": "error",
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/prefer-for-of": "off",
     "@typescript-eslint/prefer-readonly": "error",
-    "@typescript-eslint/return-await": [
-      "error",
-      "in-try-catch"
-    ],
+    "@typescript-eslint/return-await": ["error", "in-try-catch"],
     "@typescript-eslint/typedef": "off",
     "curly": "error",
     "dot-notation": "off",
@@ -68,18 +51,12 @@
     "no-unused-vars": "off",
     "no-useless-return": "error",
     "no-var": "error",
-    "one-var": [
-      "error",
-      "never"
-    ],
+    "one-var": ["error", "never"],
     "padding-line-between-statements": [
       "error",
       {
         "blankLine": "always",
-        "next": [
-          "export",
-          "expression"
-        ],
+        "next": ["export", "expression"],
         "prev": "import"
       }
     ],
@@ -99,10 +76,7 @@
     "sort-keys-fix/sort-keys-fix": "warn",
     "sort-vars": "error",
     "space-in-parens": "error",
-    "strict": [
-      "error",
-      "global"
-    ],
+    "strict": ["error", "global"],
     "typescript-sort-keys/interface": [
       "warn",
       "asc",

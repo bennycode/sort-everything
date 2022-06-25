@@ -1,6 +1,6 @@
 # Sort Everything
 
-This VS Code extension sorts actively opened JSON files by pressing "Alt" + "Shift" + "L".
+This VS Code extension sorts JSON, YAML and plain text files by pressing a hotkey (default: "Alt" + "Shift" + "L").
 
 ## How to run locally?
 

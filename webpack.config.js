@@ -7,7 +7,7 @@ const path = require('path');
 
 /** @type WebpackConfig */
 const extensionConfig = {
-  target: 'node', 
+  target: 'node',
   mode: 'none',
 
   entry: './src/extension.ts',

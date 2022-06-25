@@ -1,19 +1,10 @@
 import json5 from 'json5';
 import jsonAbc from 'jsonabc';
+import type {SortFunction} from './SortFunction';
 
-export type SortSuccess = {
-  payload: string;
-  type: 'success';
-};
-
-export type SortError = {
-  error: Error;
-  type: 'error';
-};
-
-export function sortJSON(json: string): SortSuccess | SortError {
+export const sortJSON: SortFunction = function (input: string) {
   try {
-    const object = json5.parse(json);
+    const object = json5.parse(input);
     const sorted = jsonAbc.sortObj(object, true);
     return {
       payload: JSON.stringify(sorted, null, 2),
@@ -25,4 +16,4 @@ export function sortJSON(json: string): SortSuccess | SortError {
       type: 'error',
     };
   }
-}
+};

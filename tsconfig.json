@@ -7,13 +7,12 @@
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
     "importsNotUsedAsValues": "error",
-    "lib": [
-      "ES2020"
-    ],
+    "lib": ["ES2020"],
     "module": "commonjs",
     "newLine": "lf",
     "noEmitOnError": true,
     "noImplicitReturns": true,
+    "strictFunctionTypes": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
