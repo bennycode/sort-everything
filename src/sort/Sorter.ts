@@ -1,11 +1,11 @@
 import type {SortFunction} from './SortFunction';
-import {sortJSON} from './sortJSON';
+import {sortJSONOrPlainText} from './sortJSONOrPlainText';
 import {sortPlaintext} from './sortPlaintext';
 import {sortYAML} from './sortYAML';
 
 export const Sorter: {[languageId: string]: SortFunction} = {
-  json: sortJSON,
-  jsonc: sortJSON,
+  json: sortJSONOrPlainText,
+  jsonc: sortJSONOrPlainText,
   plaintext: sortPlaintext,
   yaml: sortYAML,
 };
