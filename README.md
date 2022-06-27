@@ -1,12 +1,16 @@
 # Sort Everything
 
-This VS Code extension sorts JSON, YAML and plain text files by pressing a hotkey (default: "Alt" + "Shift" + "L").
+This VS Code extension sorts JSON, YAML and plain text files. It can sort the selected lines of code or the entire file (if no particular lines are selected).
 
-## How to run locally?
+## Usage
 
-- Open this repository in VS Code and press "F5" or start it via "Run and Debug"
+By default sorting is applied when using the shortcut "Alt" + "Shift" + "L" but you can adjust that in your [Keyboard Shortcuts editor](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor). The Command ID is "bennycode.sort-everything.sortFile" / "Sort Everything".
 
-## How to publish extension?
+## Features
 
-1. Run command [vsce package](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#usage) inside of repository
-1. Upload `*.vsix` file to https://marketplace.visualstudio.com/manage/publishers/bennycode
+1. Sort plain text file
+1. Sort plain text selection
+1. Sort JSON file
+1. Sort JSON selection
+1. Sort YAML file
+1. Sort YAML selection

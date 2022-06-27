@@ -1,8 +1,9 @@
 import * as vscode from 'vscode';
-import {getFullText, replaceText} from '../editor';
+import {Ranger, Reader, Replacer} from '../editor';
 import {Sorter} from './Sorter';
 
 export function sortFile(): void {
+  const sorter = Sorter;
   const textEditor = vscode.window.activeTextEditor;
 
   if (!textEditor) {
@@ -11,12 +12,12 @@ export function sortFile(): void {
 
   const {languageId} = textEditor.document;
 
-  const sorter = Sorter;
   if (sorter[languageId]) {
-    const unsorted = getFullText(textEditor);
+    const range = Ranger.getSelectedRange(textEditor);
+    const unsorted = Reader.getText(textEditor, range);
     const sorted = sorter[languageId](unsorted);
     if (sorted.type === 'success') {
-      replaceText(textEditor, sorted.payload);
+      void Replacer.replaceSelectedText(textEditor, range, sorted.payload);
     } else {
       void vscode.window.showWarningMessage(`Failed to sort "${languageId}": ${sorted.error}`);
     }

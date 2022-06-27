@@ -28,7 +28,7 @@
     "json5": "^2.2.1",
     "jsonabc": "^2.3.1"
   },
-  "description": "Sorts JSON, YAML and plain text files by pressing a hotkey (default: \"Alt\" + \"Shift\" + \"L\").",
+  "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
     "@types/glob": "^7.2.0",
     "@types/mocha": "^9.1.1",
@@ -91,5 +91,5 @@
     "vscode:prepublish": "yarn run package",
     "watch": "webpack --watch"
   },
-  "version": "1.0.0"
+  "version": "1.1.0"
 }
