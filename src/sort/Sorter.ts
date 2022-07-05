@@ -9,3 +9,7 @@ export const Sorter: {[languageId: string]: SortFunction} = {
   plaintext: sortPlaintext,
   yaml: sortYAML,
 };
+
+export function getSorter(languageId: string): SortFunction {
+  return Sorter[languageId] ?? sortJSONOrPlainText;
+}
