@@ -5,6 +5,7 @@
 ## How to publish this extension?
 
 1. Install "vsce": `npm install -g vsce`
+1. Update version number in "package.json" file
 1. Run command [`vsce package`](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#usage) inside of repository
 1. Upload `*.vsix` file to https://marketplace.visualstudio.com/manage/publishers/bennycode
 
