@@ -2,7 +2,7 @@
 
 This VS Code extension sorts JSON, YAML, and plain text files. It can sort the selected lines of code or the entire file (if no lines are selected).
 
-![Show sorting](./assets/sort-everything.gif)
+![Show sorting](https://raw.githubusercontent.com/bennycode/sort-everything/main/assets/sort-everything.gif)
 
 ## Installation
 
@@ -21,7 +21,7 @@ By default, sorting is applied when using the shortcut <kbd>Alt</kbd> + <kbd>Shi
 
 You can change the keybinding in your [Keyboard Shortcuts editor](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor):
 
-![Keyboard Shortcuts](./assets/keyboard-shortcuts.png)
+![Keyboard Shortcuts](https://raw.githubusercontent.com/bennycode/sort-everything/main/assets/keyboard-shortcuts.png)
 
 The Command ID is `bennycode.sort-everything.sortFile`.
 
