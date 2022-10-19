@@ -7,3 +7,7 @@
 1. Install "vsce": `npm install -g vsce`
 1. Run command [`vsce package`](https://code.visualstudio.com/api/working-with-extensions/publishing-extension#usage) inside of repository
 1. Upload `*.vsix` file to https://marketplace.visualstudio.com/manage/publishers/bennycode
+
+## Examples
+
+- https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-test-sample

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`sortYAML preserves comments when sorting YAML input 1`] = `
+"variables:
+  A_VARIABLE: 'true' # Comment A
+  B_VARIABLE: 'true' # Comment B
+  C_VARIABLE: 'true' # Comment C
+"
+`;
