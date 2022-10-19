@@ -1,4 +1,4 @@
-import {Document, ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
+import {ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
 import type {SortFunction} from './SortFunction';
 
 function sortDeep(node: ParsedNode | null): void {
@@ -10,18 +10,13 @@ function sortDeep(node: ParsedNode | null): void {
   }
 }
 
-function stableStringify(doc: Document.Parsed<ParsedNode>): string {
-  sortDeep(doc.contents);
-  return doc.toString();
-}
-
 export const sortYAML: SortFunction = function (text: string) {
   try {
     const document = parseDocument(text);
-    const sorted = stableStringify(document);
+    sortDeep(document.contents);
 
     return {
-      payload: sorted,
+      payload: document.toString(),
       type: 'success',
     };
   } catch (error) {
