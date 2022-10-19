@@ -22,7 +22,6 @@
     ]
   },
   "dependencies": {
-    "@types/js-yaml": "^4.0.5",
     "@types/jsonabc": "^2.3.1",
     "json5": "^2.2.1",
     "jsonabc": "^2.3.1",

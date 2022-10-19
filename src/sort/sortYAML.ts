@@ -1,7 +1,7 @@
 import {Document, ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
 import type {SortFunction} from './SortFunction';
 
-function sortDeep(node: ParsedNode | null) {
+function sortDeep(node: ParsedNode | null): void {
   if (node instanceof YAMLMap) {
     node.items.sort((itemA, itemB) => (itemA.key < itemB.key ? -1 : itemA.key > itemB.key ? 1 : 0));
     node.items.forEach(item => sortDeep(item.value));
