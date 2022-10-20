@@ -92,5 +92,5 @@
     "vscode:prepublish": "yarn run package",
     "watch": "webpack --watch"
   },
-  "version": "1.3.0"
+  "version": "1.3.1"
 }
