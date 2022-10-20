@@ -11,13 +11,13 @@ Open the [extensions' marketplace site][1] and click "Install".
 Alternative:
 
 1. Start Visual Studio Code
-2. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> to [browse for extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions)
-3. Search for `bennycode.sort-everything.sortFile`
-4. Select the "Sort Everything" extension and click on "Install"
+1. Press <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd> to [browse for extensions](https://code.visualstudio.com/docs/editor/extension-marketplace#_browse-for-extensions)
+1. Search for `bennycode.sort-everything`
+1. Select the "Sort Everything" extension and click on "Install"
 
 ## Usage
 
-By default, sorting is applied when using the shortcut <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>. 
+By default, sorting is applied when using the shortcut <kbd>Alt</kbd> + <kbd>Shift</kbd> + <kbd>L</kbd>.
 
 You can change the keybinding in your [Keyboard Shortcuts editor](https://code.visualstudio.com/docs/getstarted/keybindings#_keyboard-shortcuts-editor):
 
