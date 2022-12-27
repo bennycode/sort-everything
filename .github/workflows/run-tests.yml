@@ -15,8 +15,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-latest ]
-        node-version: [ 18.x ]
+        os: [ubuntu-latest]
+        node-version: [18.x]
     steps:
       - name: 'Checkout Git repository with history for all branches and tags'
         uses: actions/checkout@v3

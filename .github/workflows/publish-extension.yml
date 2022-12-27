@@ -1,0 +1,30 @@
+name: 'Publish Extension'
+
+on:
+  workflow_dispatch:
+    inputs:
+      semver:
+        description: 'Semantic Version'
+        required: true
+        default: 'patch'
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm install -g @vscode/vsce
+      - run: vsce login ${{ secrets.VSCE_PAT }}
+      - run: vsce publish ${{ github.event.inputs.semver }}
+      - run: |
+          git add package.json
+          git commit -m "Automated Release"
+          git push origin && git push origin --tags

@@ -1,5 +1,5 @@
 import {sortYAML} from './sortYAML';
-import assert from 'assert';
+import assert from 'node:assert';
 
 describe('sortYAML', () => {
   it('preserves comments when sorting YAML input', () => {
@@ -11,7 +11,6 @@ variables:
   `;
 
     const actual = sortYAML(input);
-
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
