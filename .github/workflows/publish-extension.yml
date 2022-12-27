@@ -30,9 +30,10 @@ jobs:
           git config --global user.email "${{ secrets.MY_GITHUB_EMAIL }}"
           git config --global user.name "Benny Neugebauer"
       - name: 'Publish VS Code extension'
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
-          vsce login bennycode
-          vsce publish ${{ github.event.inputs.semver }} -p ${{ secrets.VSCE_PAT }}
+          vsce publish ${{ github.event.inputs.semver }}
       - name: 'Commit updates'
         run: |
           git add package.json
