@@ -32,7 +32,7 @@ jobs:
       - name: 'Publish VS Code extension'
         run: |
           vsce login bennycode
-          vsce publish ${{ github.event.inputs.semver }}
+          vsce publish ${{ github.event.inputs.semver }} -p ${{ secrets.VSCE_PAT }}
       - name: 'Commit updates'
         run: |
           git add package.json
