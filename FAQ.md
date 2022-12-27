@@ -13,9 +13,10 @@
 
 1. Create a **Personal Access Token** (PAT) on [Azure DevOps](https://azure.microsoft.com/services/devops/)
 2. Register the PAT (it comes with an expiry date) as GitHub Secret (`VSCE_PAT`)
-3. Make use of the GitHub workflow trigger
+3. Make use of the [GitHub workflow trigger](https://github.com/bennycode/sort-everything/actions/workflows/publish-extension.yml)
 4. Renew the PAT if it expires
 
 ## Examples
 
 - https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-test-sample
+- https://github.com/microsoft/vscode-platform-specific-sample/tree/main/.github/workflows

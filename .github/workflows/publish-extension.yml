@@ -34,8 +34,3 @@ jobs:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: |
           vsce publish ${{ github.event.inputs.semver }}
-      - name: 'Commit updates'
-        run: |
-          git add package.json
-          git commit -m "Automated Release"
-          git push origin && git push origin --tags
