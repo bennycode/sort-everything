@@ -25,7 +25,7 @@
     "@types/jsonabc": "^2.3.1",
     "json5": "^2.2.3",
     "jsonabc": "^2.3.1",
-    "yaml": "^2.2.1"
+    "yaml": "^2.2.2"
   },
   "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
