@@ -4,6 +4,7 @@ import {sortPlaintext} from './sortPlaintext';
 import {sortYAML} from './sortYAML';
 
 export const Sorter: {[languageId: string]: SortFunction} = {
+  dockercompose: sortYAML,
   json: sortJSONOrPlainText,
   jsonc: sortJSONOrPlainText,
   plaintext: sortPlaintext,
