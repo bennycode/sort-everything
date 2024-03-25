@@ -16,6 +16,12 @@
 3. Make use of the [GitHub workflow trigger](https://github.com/bennycode/sort-everything/actions/workflows/publish-extension.yml)
 4. Renew the PAT if it expires
 
+The `VSCE_PAT` [repository secret](https://github.com/bennycode/sort-everything/settings/secrets/actions) need to be updated in case this error message appears:
+
+> Access Denied: The Personal Access Token used has expired.
+
+The Personal Access Token can be renewed [here](https://dev.azure.com/bennycode/_usersSettings/tokens). Make sure the **Marketplace** scope is set to **Manage** ([see here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)).
+
 ## Examples
 
 - https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-test-sample
