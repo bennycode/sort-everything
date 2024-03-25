@@ -34,4 +34,14 @@ The Command ID is `bennycode.sort-everything.sortFile`.
 - Sort YAML file
 - Sort YAML selection
 
+## Release
+
+There is a [publish-extension](.github/workflows/publish-extension.yml) GitHub Action which can be used to publish the extension on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
+
+The `VSCE_PAT` [repository secret](https://github.com/bennycode/sort-everything/settings/secrets/actions) need to be updated in case this error message appears:
+
+> Access Denied: The Personal Access Token used has expired.
+
+The Personal Access Token can be renewed [here](https://dev.azure.com/bennycode/_usersSettings/tokens). Make sure the **Marketplace** scope is set to **Manage** ([see here](https://code.visualstudio.com/api/working-with-extensions/publishing-extension)).
+
 [1]: https://marketplace.visualstudio.com/items?itemName=bennycode.sort-everything
