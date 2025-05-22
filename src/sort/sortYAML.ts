@@ -15,7 +15,7 @@ function detectIndentation(text: string): number {
       return match[1].length;
     }
   }
-  return 2; // Default to 2 spaces if no indentation is detected
+  return 0; // Default to 0 spaces if no indentation is detected
 }
 
 /**
