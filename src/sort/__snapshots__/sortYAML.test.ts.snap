@@ -7,3 +7,36 @@ exports[`sortYAML preserves comments when sorting YAML input 1`] = `
   C_VARIABLE: 'true' # Comment C
 "
 `;
+
+exports[`sortYAML preserves leading whitespace 1`] = `
+"      action:
+        allow: true
+      scope: 'authentication'
+      zIndex: -999
+"
+`;
+
+exports[`sortYAML sorts a list of dictionaries 1`] = `
+"# Inspired from:
+# https://github.com/auth0/auth0-deploy-cli/blob/v8.8.2/examples/yaml/tenant.yaml
+networkACLs:
+  - html: 'pages/login.html'
+    name: 'login'
+  - app_type: native
+    mobile:
+      android:
+        # Test Comment
+        app_package_name: com.my.android.id
+    name: 'an app'
+  - active: true
+    description: 'Allow Specific Countries'
+    priority: 2
+    rule:
+      action:
+        allow: true
+      match:
+        geo_country_codes: [ 'US', 'CA' ]
+      scope: 'authentication'
+      zIndex: -999
+"
+`;

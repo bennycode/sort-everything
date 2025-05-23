@@ -1,0 +1,4 @@
+variables:
+  C_VARIABLE: 'true' # Comment C
+  A_VARIABLE: 'true' # Comment A
+  B_VARIABLE: 'true' # Comment B

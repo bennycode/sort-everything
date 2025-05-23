@@ -1,5 +1,6 @@
 import {ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
 import type {SortFunction} from './SortFunction';
+import {StringUtil} from '../util/StringUtil';
 
 function sortDeep(node: ParsedNode | null) {
   if (node instanceof YAMLMap) {
@@ -13,10 +14,13 @@ function sortDeep(node: ParsedNode | null) {
 export const sortYAML: SortFunction = function (text: string) {
   try {
     const document = parseDocument(text);
+    const indent = StringUtil.countLeadingWhitespaces(text);
     sortDeep(document.contents);
+    const endsWithNewline = StringUtil.endsWithNewline(text);
+    const sortedText = endsWithNewline ? document.toString() : document.toString().trimEnd();
 
     return {
-      payload: document.toString(),
+      payload: StringUtil.applyIndent(sortedText, indent),
       type: 'success',
     };
   } catch (error) {

@@ -6,6 +6,7 @@ networkACLs:
   - name: 'an app'
     mobile:
       android:
+        # Test Comment
         app_package_name: com.my.android.id
     app_type: native
   - description: 'Allow Specific Countries'

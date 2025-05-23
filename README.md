@@ -34,8 +34,4 @@ The Command ID is `bennycode.sort-everything.sortFile`.
 - Sort YAML file
 - Sort YAML selection
 
-## Release
-
-There is a [publish-extension](.github/workflows/publish-extension.yml) GitHub Action which can be used to publish the extension on the [Visual Studio Marketplace](https://marketplace.visualstudio.com/).
-
 [1]: https://marketplace.visualstudio.com/items?itemName=bennycode.sort-everything

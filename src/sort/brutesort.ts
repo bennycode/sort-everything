@@ -1,5 +1,8 @@
 import type {SortError, SortFunction, SortSuccess} from './SortFunction';
 
-export function brutesort(input: string, algos: SortFunction[]): SortSuccess | SortError | undefined {
-  return algos.map(algo => algo(input)).find(result => result.type === 'success');
+/**
+ * Tries different sorters until one sorting function is found that could successfully sort the input.
+ */
+export function brutesort(input: string, sorters: SortFunction[]): SortSuccess | SortError | undefined {
+  return sorters.map(sort => sort(input)).find(result => result.type === 'success');
 }
