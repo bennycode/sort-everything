@@ -1,4 +1,4 @@
-import {ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
+import {ParsedNode, parseDocument, ToStringOptions, YAMLMap, YAMLSeq} from 'yaml';
 import type {SortFunction} from './SortFunction';
 import {StringUtil} from '../util/StringUtil';
 
@@ -17,7 +17,10 @@ export const sortYAML: SortFunction = function (text: string) {
     const indent = StringUtil.countLeadingWhitespaces(text);
     sortDeep(document.contents);
     const endsWithNewline = StringUtil.endsWithNewline(text);
-    const sortedText = endsWithNewline ? document.toString() : document.toString().trimEnd();
+    const options: ToStringOptions = {
+      lineWidth: 0,
+    };
+    const sortedText = endsWithNewline ? document.toString(options) : document.toString(options).trimEnd();
 
     return {
       payload: StringUtil.applyIndent(sortedText, indent),

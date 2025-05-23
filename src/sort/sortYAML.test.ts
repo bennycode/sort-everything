@@ -31,4 +31,11 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('does not enforce a certain line width', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/line-width.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });
