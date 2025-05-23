@@ -1,10 +1,6 @@
 import {ParsedNode, parseDocument, YAMLMap, YAMLSeq} from 'yaml';
 import type {SortFunction} from './SortFunction';
-
-function countLeadingWhitespaces(text: string) {
-  const match = text.match(/^\s*/);
-  return match ? match[0].length : 0;
-}
+import {StringUtil} from '../util/StringUtil';
 
 function sortDeep(node: ParsedNode | null) {
   if (node instanceof YAMLMap) {
@@ -15,28 +11,16 @@ function sortDeep(node: ParsedNode | null) {
   }
 }
 
-function applyIndent(text: string, indent: number) {
-  const spaces = ' '.repeat(indent);
-  let indented = '';
-
-  if (indent > 0) {
-    indented = text
-      .split('\n')
-      .map(line => (line.length > 0 ? spaces + line : line))
-      .join('\n');
-  }
-
-  return indented ? indented : text;
-}
-
 export const sortYAML: SortFunction = function (text: string) {
   try {
     const document = parseDocument(text);
-    const indent = countLeadingWhitespaces(text);
+    const indent = StringUtil.countLeadingWhitespaces(text);
     sortDeep(document.contents);
+    const endsWithNewline = StringUtil.endsWithNewline(text);
+    const sortedText = endsWithNewline ? document.toString() : document.toString().trimEnd();
 
     return {
-      payload: applyIndent(document.toString(), indent),
+      payload: StringUtil.applyIndent(sortedText, indent),
       type: 'success',
     };
   } catch (error) {

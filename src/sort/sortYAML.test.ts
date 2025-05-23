@@ -17,4 +17,11 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('does not add extra line endings', () => {
+    const actual = sortYAML('Hello\nWorld');
+    assert(actual.type === 'success');
+    console.log(actual.payload);
+    expect(actual.payload.endsWith('World')).toBeTruthy();
+  });
 });
