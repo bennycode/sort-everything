@@ -8,6 +8,4 @@ export type SortError = {
   type: 'error';
 };
 
-export type SortFunction = {
-  (input: string): SortSuccess | SortError;
-};
+export type SortFunction = (input: string) => SortSuccess | SortError;

@@ -1,0 +1,20 @@
+# Inspired from:
+# https://github.com/auth0/auth0-deploy-cli/blob/v8.8.2/examples/yaml/tenant.yaml
+networkACLs:
+  - name: 'login'
+    html: 'pages/login.html'
+  - name: 'an app'
+    mobile:
+      android:
+        app_package_name: com.my.android.id
+    app_type: native
+  - description: 'Allow Specific Countries'
+    priority: 2
+    active: true
+    rule:
+      zIndex: -999
+      action:
+        allow: true
+      scope: 'authentication'
+      match:
+        geo_country_codes: ['US', 'CA']
