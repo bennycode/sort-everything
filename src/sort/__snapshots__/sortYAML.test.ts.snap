@@ -7,3 +7,11 @@ exports[`sortYAML preserves comments when sorting YAML input 1`] = `
   C_VARIABLE: 'true' # Comment C
 "
 `;
+
+exports[`sortYAML preserves leading whitespace 1`] = `
+"      action:
+        allow: true
+      scope: 'authentication'
+      zIndex: -999
+"
+`;
