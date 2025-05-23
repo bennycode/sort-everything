@@ -1,6 +1,6 @@
 ## How to run this extension locally?
 
-- Open this repository in VS Code and press "F5" or start it via "Run and Debug"
+- Open this repository in VS Code and start it via "Run and Debug". A new VS Code window will be opened (having the extension installed) and debug information (like `console.log` statements) will be reported to the "Debug Console" in the initial VS Code window.
 
 ## How to manually publish this extension?
 
