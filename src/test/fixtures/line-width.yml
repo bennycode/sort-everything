@@ -1,0 +1,5 @@
+# The "yaml" package uses a default line width of 80 which we usually don't want
+# https://github.com/eemeli/yaml/blob/v2.8.0/src/stringify/foldFlowLines.ts#L18-L19
+terraform:
+  zz: asdf
+  url: 'https://releases.hashicorp.com/terraform/1.5.7/terraform_1.5.7_linux_amd64.zip'
