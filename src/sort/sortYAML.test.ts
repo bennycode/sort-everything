@@ -24,4 +24,11 @@ describe('sortYAML', () => {
     console.log(actual.payload);
     expect(actual.payload.endsWith('World')).toBeTruthy();
   });
+
+  it('sorts a list of dictionaries', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/list-of-dictionaries.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });

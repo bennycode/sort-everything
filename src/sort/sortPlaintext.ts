@@ -7,8 +7,7 @@ export const sortPlaintext: SortFunction = function (input: string) {
       .sort((a, b) => a.localeCompare(b, undefined, {numeric: true, sensitivity: 'base'}))
       .join('\n');
     return {
-      // Remove last element so that line break is not taken into consideration on next sort
-      payload: sorted.trim(),
+      payload: sorted,
       type: 'success',
     };
   } catch (error) {
