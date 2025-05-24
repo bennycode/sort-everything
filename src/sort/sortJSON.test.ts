@@ -1,14 +1,11 @@
+import * as fs from 'fs';
+import * as path from 'path';
 import {sortJSON} from './sortJSON';
 
 describe('sortJSON', () => {
   it('should preserve line comments when sorting JSON5', () => {
     // Arrange
-    const input = `{
-  // XYZ
-  "xyz": "xyz",
-  // ABC
-  "abc": "abc"
-}`;
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/line-comments.json5'), 'utf-8');
 
     const expectedOutput = `{
   // ABC
@@ -29,12 +26,7 @@ describe('sortJSON', () => {
 
   it('should preserve single-line block comments when sorting JSON5', () => {
     // Arrange
-    const input = `{
-  /* XYZ */
-  "xyz": "xyz",
-  /* ABC */
-  "abc": "abc"
-}`;
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/single-line-block-comments.json5'), 'utf-8');
 
     const expectedOutput = `{
   /* ABC */
@@ -55,18 +47,7 @@ describe('sortJSON', () => {
 
   it('should preserve multi-line block comments when sorting JSON5', () => {
     // Arrange
-    const input = `{
-  /*
-   * XYZ
-   * Description
-   */
-  "xyz": "xyz",
-  /*
-   * ABC
-   * Description
-   */
-  "abc": "abc"
-}`;
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/multi-line-block-comments.json5'), 'utf-8');
 
     const expectedOutput = `{
   /*
@@ -95,10 +76,7 @@ describe('sortJSON', () => {
 
   it('should sort JSON without comments correctly', () => {
     // Arrange
-    const input = `{
-  "xyz": "xyz",
-  "abc": "abc"
-}`;
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/no-comments.json5'), 'utf-8');
 
     const expectedOutput = `{
   "abc": "abc",
