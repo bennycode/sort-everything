@@ -25,18 +25,23 @@ exports[`sortYAML preserves leading whitespace 1`] = `
 "
 `;
 
+exports[`sortYAML sorts YAML sequences with value objects 1`] = `
+"resourceServers:
+  - allow_offline_access: true
+    enforce_policies: true
+    identifier: https://bennycode.com/
+    name: Logical API
+    scopes:
+      - value: abc:edit
+      - value: abc:manage
+      - value: abc:read
+      - value: abc:view"
+`;
+
 exports[`sortYAML sorts a list of dictionaries 1`] = `
 "# Inspired from:
 # https://github.com/auth0/auth0-deploy-cli/blob/v8.8.2/examples/yaml/tenant.yaml
 networkACLs:
-  - html: 'pages/login.html'
-    name: 'login'
-  - app_type: native
-    mobile:
-      android:
-        # Test Comment
-        app_package_name: com.my.android.id
-    name: 'an app'
   - active: true
     description: 'Allow Specific Countries'
     priority: 2
@@ -44,8 +49,16 @@ networkACLs:
       action:
         allow: true
       match:
-        geo_country_codes: [ 'US', 'CA' ]
+        geo_country_codes: [ 'CA', 'US' ]
       scope: 'authentication'
       zIndex: -999
+  - app_type: native
+    mobile:
+      android:
+        # Test Comment
+        app_package_name: com.my.android.id
+    name: 'an app'
+  - html: 'pages/login.html'
+    name: 'login'
 "
 `;
