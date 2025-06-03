@@ -38,4 +38,11 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('sorts YAML sequences with value objects', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/yaml-sequence-sorting.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });

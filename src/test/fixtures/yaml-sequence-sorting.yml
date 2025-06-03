@@ -1,0 +1,10 @@
+resourceServers:
+  - allow_offline_access: true
+    enforce_policies: true
+    identifier: https://bennycode.com/
+    name: Logical API
+    scopes:
+      - value: abc:read
+      - value: abc:manage
+      - value: abc:edit
+      - value: abc:view
