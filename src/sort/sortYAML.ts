@@ -7,6 +7,12 @@ function sortDeep(node: ParsedNode | null) {
     node.items.sort((itemA, itemB) => (itemA.key < itemB.key ? -1 : itemA.key > itemB.key ? 1 : 0));
     node.items.forEach(item => sortDeep(item.value));
   } else if (node instanceof YAMLSeq) {
+    // Sort sequence items by their string representation
+    node.items.sort((itemA, itemB) => {
+      const strA = itemA?.toString() || '';
+      const strB = itemB?.toString() || '';
+      return strA < strB ? -1 : strA > strB ? 1 : 0;
+    });
     node.items.forEach(item => sortDeep(item));
   }
 }
