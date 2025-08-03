@@ -1,4 +1,4 @@
-      zIndex: -999
-      action:
-        allow: true
-      scope: 'authentication'
+zIndex: -999
+action:
+  allow: true
+scope: 'authentication'
