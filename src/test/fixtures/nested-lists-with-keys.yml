@@ -1,0 +1,13 @@
+# Test case: Nested lists where child lists have "key" fields
+# The inner lists should be sorted by key
+envVars:
+  production:
+    - key: ZEBRA_VAR
+      value: 'z'
+    - key: APPLE_VAR
+      value: 'a'
+  development:
+    - key: YELLOW_VAR
+      value: 'y'
+    - key: BETA_VAR
+      value: 'b'

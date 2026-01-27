@@ -1,0 +1,5 @@
+envVars:
+  - key: XMTP_DB_ENCRYPTION_KEY
+    sync: false
+  - key: TYPEDTRADER_DB_DIRECTORY
+    value: '/var/data'

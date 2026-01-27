@@ -1,0 +1,2 @@
+# Test fixtures that need to preserve exact formatting
+src/test/fixtures/leading-whitespace.yml

@@ -1,0 +1,9 @@
+# Test case: Mixed list with some items having "key" field and some not
+# This should NOT be sorted by key since not all items have the field
+items:
+  - key: ZEBRA
+    value: 'last'
+  - name: 'middle'
+    description: 'no key field here'
+  - key: APPLE
+    value: 'first'
