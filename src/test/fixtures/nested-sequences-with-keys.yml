@@ -1,0 +1,15 @@
+# Test: Nested sequences (list of lists) where each inner sequence has maps with "key" fields
+# The outer list should be sorted by the first element's "key" value of each inner list
+groups:
+  - - key: ZEBRA_1
+      value: 'z1'
+    - key: ZEBRA_2
+      value: 'z2'
+  - - key: APPLE_1
+      value: 'a1'
+    - key: APPLE_2
+      value: 'a2'
+  - - key: MIDDLE_1
+      value: 'm1'
+    - key: MIDDLE_2
+      value: 'm2'

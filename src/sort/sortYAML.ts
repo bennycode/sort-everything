@@ -13,6 +13,15 @@ function sortDeep(node: ParsedNode | null) {
       return item instanceof YAMLMap && item.items.some(pair => pair.key?.toString() === 'key');
     });
 
+    // Check if all items are YAMLSeqs where the first element is a YAMLMap with a "key" field
+    const allItemsAreSeqsWithKeyInFirst = node.items.every(item => {
+      if (item instanceof YAMLSeq && item.items.length > 0) {
+        const firstItem = item.items[0];
+        return firstItem instanceof YAMLMap && firstItem.items.some(pair => pair.key?.toString() === 'key');
+      }
+      return false;
+    });
+
     // If all items have a "key" field, sort by the value of that field
     if (allItemsAreMapsWithKey) {
       node.items.sort((itemA, itemB) => {
@@ -23,6 +32,26 @@ function sortDeep(node: ParsedNode | null) {
 
         const keyPairA = itemA.items.find(pair => pair.key?.toString() === 'key');
         const keyPairB = itemB.items.find(pair => pair.key?.toString() === 'key');
+
+        const valueA = keyPairA?.value?.toString() ?? '';
+        const valueB = keyPairB?.value?.toString() ?? '';
+
+        return valueA < valueB ? -1 : valueA > valueB ? 1 : 0;
+      });
+    }
+    // If all items are sequences with a leading element that has a "key" field, sort by that
+    else if (allItemsAreSeqsWithKeyInFirst) {
+      node.items.sort((itemA, itemB) => {
+        // Type guard: we've verified these are YAMLSeqs
+        if (!(itemA instanceof YAMLSeq && itemB instanceof YAMLSeq)) {
+          return 0;
+        }
+
+        const firstMapA = itemA.items[0] as YAMLMap;
+        const firstMapB = itemB.items[0] as YAMLMap;
+
+        const keyPairA = firstMapA.items.find(pair => pair.key?.toString() === 'key');
+        const keyPairB = firstMapB.items.find(pair => pair.key?.toString() === 'key');
 
         const valueA = keyPairA?.value?.toString() ?? '';
         const valueB = keyPairB?.value?.toString() ?? '';

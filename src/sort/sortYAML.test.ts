@@ -66,4 +66,11 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('sorts nested sequences by their leading element key', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/nested-sequences-with-keys.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });
