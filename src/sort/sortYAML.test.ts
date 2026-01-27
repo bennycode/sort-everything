@@ -38,4 +38,11 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('sorts list items by their "key" field value', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/list-with-key-field.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });

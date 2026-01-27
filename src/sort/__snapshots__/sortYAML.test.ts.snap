@@ -49,3 +49,12 @@ networkACLs:
       zIndex: -999
 "
 `;
+
+exports[`sortYAML sorts list items by their "key" field value 1`] = `
+"envVars:
+  - key: TYPEDTRADER_DB_DIRECTORY
+    value: '/var/data'
+  - key: XMTP_DB_ENCRYPTION_KEY
+    sync: false
+"
+`;
