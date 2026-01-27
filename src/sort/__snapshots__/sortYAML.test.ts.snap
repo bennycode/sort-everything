@@ -9,6 +9,19 @@ terraform:
 "
 `;
 
+exports[`sortYAML does not sort mixed lists where not all items have a "key" field 1`] = `
+"# Test case: Mixed list with some items having "key" field and some not
+# This should NOT be sorted by key since not all items have the field
+items:
+  - key: ZEBRA
+    value: 'last'
+  - description: 'no key field here'
+    name: 'middle'
+  - key: APPLE
+    value: 'first'
+"
+`;
+
 exports[`sortYAML preserves comments when sorting YAML input 1`] = `
 "variables:
   A_VARIABLE: 'true' # Comment A
@@ -56,5 +69,34 @@ exports[`sortYAML sorts list items by their "key" field value 1`] = `
     value: '/var/data'
   - key: XMTP_DB_ENCRYPTION_KEY
     sync: false
+"
+`;
+
+exports[`sortYAML sorts lists with special characters in key values 1`] = `
+"# Test case: Empty values and special characters
+items:
+  - key: 'a-normal'
+    value: 'test'
+  - key: 'm-number'
+    value: 123
+  - key: 'z-special'
+    value: ''
+"
+`;
+
+exports[`sortYAML sorts nested lists with "key" fields 1`] = `
+"# Test case: Nested lists where child lists have "key" fields
+# The inner lists should be sorted by key
+envVars:
+  development:
+    - key: BETA_VAR
+      value: 'b'
+    - key: YELLOW_VAR
+      value: 'y'
+  production:
+    - key: APPLE_VAR
+      value: 'a'
+    - key: ZEBRA_VAR
+      value: 'z'
 "
 `;

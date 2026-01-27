@@ -45,4 +45,25 @@ describe('sortYAML', () => {
     assert(actual.type === 'success');
     expect(actual.payload).toMatchSnapshot();
   });
+
+  it('does not sort mixed lists where not all items have a "key" field', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/mixed-list.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
+
+  it('sorts nested lists with "key" fields', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/nested-lists-with-keys.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
+
+  it('sorts lists with special characters in key values', () => {
+    const input = fs.readFileSync(path.join(__dirname, '../test/fixtures/special-chars-keys.yml'), 'utf-8');
+    const actual = sortYAML(input);
+    assert(actual.type === 'success');
+    expect(actual.payload).toMatchSnapshot();
+  });
 });

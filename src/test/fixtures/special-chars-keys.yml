@@ -1,0 +1,8 @@
+# Test case: Empty values and special characters
+items:
+  - key: 'z-special'
+    value: ''
+  - key: 'a-normal'
+    value: 'test'
+  - key: 'm-number'
+    value: 123
