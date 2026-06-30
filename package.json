@@ -18,10 +18,10 @@
     ]
   },
   "dependencies": {
-    "@types/jsonabc": "^2.3.1",
+    "@types/jsonabc": "^2.3.3",
     "json5": "^2.2.3",
     "jsonabc": "^2.3.1",
-    "yaml": "^2.8.3"
+    "yaml": "^2.9.0"
   },
   "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
@@ -29,14 +29,14 @@
     "@types/jest": "^30.0.0",
     "@types/node": "^26.0.1",
     "@types/vscode": "^1.68.0",
-    "@vscode/test-electron": "^2.3.0",
-    "cross-env": "^7.0.3",
+    "@vscode/test-electron": "^3.0.0",
+    "cross-env": "^10.1.0",
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11",
-    "ts-loader": "^9.5.2",
-    "typescript": "^5.8.3",
-    "webpack": "^5.104.1",
-    "webpack-cli": "^5.0.1"
+    "ts-loader": "^9.6.2",
+    "typescript": "^5.9.3",
+    "webpack": "^5.108.3",
+    "webpack-cli": "^7.1.0"
   },
   "displayName": "Sort Everything",
   "engines": {
