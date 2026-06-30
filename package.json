@@ -1,11 +1,7 @@
 {
-  "activationEvents": [
-    "onCommand:bennycode.sort-everything.sortFile"
-  ],
+  "activationEvents": ["onCommand:bennycode.sort-everything.sortFile"],
   "author": "Benny Neugebauer",
-  "categories": [
-    "Other"
-  ],
+  "categories": ["Other"],
   "contributes": {
     "commands": [
       {
@@ -29,21 +25,13 @@
   },
   "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
+    "@biomejs/biome": "2.5.1",
     "@types/jest": "^30.0.0",
     "@types/node": "^24.13.2",
     "@types/vscode": "^1.68.0",
-    "@typescript-eslint/eslint-plugin": "^5.54.0",
-    "@typescript-eslint/parser": "^5.54.0",
     "@vscode/test-electron": "^2.3.0",
     "cross-env": "^7.0.3",
-    "eslint": "^8.35.0",
-    "eslint-config-prettier": "^8.6.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "eslint-plugin-typescript-sort-keys": "^2.1.0",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "jest": "^30.4.2",
-    "prettier": "^2.8.4",
     "ts-jest": "^29.4.11",
     "ts-loader": "^9.5.2",
     "typescript": "^5.8.3",
@@ -60,17 +48,7 @@
   },
   "homepage": "https://github.com/bennycode/sort-everything",
   "icon": "assets/icon.png",
-  "keywords": [
-    "sorting",
-    "sort",
-    "yaml",
-    "yml",
-    "plaintext",
-    "text",
-    "json",
-    "lines",
-    "code"
-  ],
+  "keywords": ["sorting", "sort", "yaml", "yml", "plaintext", "text", "json", "lines", "code"],
   "license": "MIT",
   "main": "./dist/extension.js",
   "name": "sort-everything",
@@ -81,10 +59,8 @@
   },
   "scripts": {
     "compile": "webpack",
-    "fix": "yarn lint:prettier --write && yarn lint:eslint --fix --quiet",
-    "lint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
-    "lint:eslint": "eslint --ignore-path .gitignore --ext .js,.jsx,.ts,.tsx .",
-    "lint:prettier": "prettier --ignore-path .gitignore --loglevel error \"**/*.{json,scss,yml}\"",
+    "fix": "biome check --write",
+    "lint": "biome check",
     "package": "webpack --mode production --devtool hidden-source-map",
     "postversion": "git push origin main && git push origin --tags",
     "pretest": "yarn run compile && yarn run lint",
