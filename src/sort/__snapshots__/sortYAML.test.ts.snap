@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`sortYAML does not enforce a certain line width 1`] = `
 "# The "yaml" package uses a default line width of 80 which we usually don't want
