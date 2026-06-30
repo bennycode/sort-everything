@@ -33,7 +33,7 @@
     "cross-env": "^7.0.3",
     "jest": "^30.4.2",
     "ts-jest": "^29.4.11",
-    "ts-loader": "^9.5.2",
+    "ts-loader": "^9.6.2",
     "typescript": "^5.8.3",
     "webpack": "^5.104.1",
     "webpack-cli": "^5.0.1"
