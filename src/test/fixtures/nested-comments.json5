@@ -1,0 +1,9 @@
+{
+  // root note
+  "server": {
+    // port to bind
+    "port": 8080,
+    "host": "localhost"
+  },
+  "active": true
+}
