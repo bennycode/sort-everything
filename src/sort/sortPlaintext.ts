@@ -1,6 +1,6 @@
 import type {SortFunction} from './SortFunction';
 
-export const sortPlaintext: SortFunction = function (input: string) {
+export const sortPlaintext: SortFunction = (input: string) => {
   try {
     const sorted = input
       .split('\n')

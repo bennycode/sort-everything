@@ -1,13 +1,13 @@
 {
-  "version": "0.2.0",
   "configurations": [
     {
-      "name": "Run Extension",
-      "type": "extensionHost",
-      "request": "launch",
       "args": ["--extensionDevelopmentPath=${workspaceFolder}"],
+      "name": "Run Extension",
       "outFiles": ["${workspaceFolder}/dist/**/*.js"],
-      "preLaunchTask": "package"
+      "preLaunchTask": "package",
+      "request": "launch",
+      "type": "extensionHost"
     }
-  ]
+  ],
+  "version": "0.2.0"
 }

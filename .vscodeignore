@@ -8,6 +8,6 @@ src/**
 webpack.config.js
 vsc-extension-quickstart.md
 **/tsconfig.json
-**/.eslintrc.json
+biome.json
 **/*.map
 **/*.ts

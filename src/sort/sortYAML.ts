@@ -1,6 +1,6 @@
 import {ParsedNode, parseDocument, ToStringOptions, YAMLMap, YAMLSeq} from 'yaml';
-import type {SortFunction} from './SortFunction';
 import {StringUtil} from '../util/StringUtil';
+import type {SortFunction} from './SortFunction';
 
 function sortDeep(node: ParsedNode | null) {
   if (node instanceof YAMLMap) {
@@ -11,7 +11,7 @@ function sortDeep(node: ParsedNode | null) {
   }
 }
 
-export const sortYAML: SortFunction = function (text: string) {
+export const sortYAML: SortFunction = (text: string) => {
   try {
     const document = parseDocument(text);
     const indent = StringUtil.countLeadingWhitespaces(text);

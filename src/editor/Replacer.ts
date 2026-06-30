@@ -1,5 +1,5 @@
-import * as vscode from 'vscode';
 import type {Range, TextEditor} from 'vscode';
+import * as vscode from 'vscode';
 import {Ranger} from './Ranger';
 
 export class Replacer {

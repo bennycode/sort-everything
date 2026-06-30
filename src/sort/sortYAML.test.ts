@@ -1,7 +1,7 @@
-import {sortYAML} from './sortYAML';
 import assert from 'node:assert';
 import fs from 'node:fs';
 import path from 'node:path';
+import {sortYAML} from './sortYAML';
 
 describe('sortYAML', () => {
   it('preserves comments when sorting YAML input', () => {

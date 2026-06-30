@@ -3,27 +3,22 @@ const path = require('path');
 
 /** @type {import('webpack').Configuration} */
 const extensionConfig = {
-  target: 'node',
-  mode: 'none',
+  devtool: 'nosources-source-map',
 
   entry: './src/extension.ts',
-  output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: 'extension.js',
-    libraryTarget: 'commonjs2',
-  },
   externals: {
     vscode: 'commonjs vscode', // the vscode-module is created on-the-fly and must be excluded. Add other modules that cannot be webpack'ed, 📖 -> https://webpack.js.org/configuration/externals/
     // modules added here also need to be added in the .vscodeignore file
   },
-  resolve: {
-    extensions: ['.ts', '.js'],
+  infrastructureLogging: {
+    level: 'log', // enables logging required for problem matchers
   },
+  mode: 'none',
   module: {
     rules: [
       {
-        test: /\.ts$/,
         exclude: /node_modules/,
+        test: /\.ts$/,
         use: [
           {
             loader: 'ts-loader',
@@ -32,9 +27,14 @@ const extensionConfig = {
       },
     ],
   },
-  devtool: 'nosources-source-map',
-  infrastructureLogging: {
-    level: 'log', // enables logging required for problem matchers
+  output: {
+    filename: 'extension.js',
+    libraryTarget: 'commonjs2',
+    path: path.resolve(__dirname, 'dist'),
   },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
+  target: 'node',
 };
 module.exports = [extensionConfig];
