@@ -840,10 +840,10 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.15.tgz#596a1747233694d50f6ad8a7869fcb6f56cf5841"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
-"@types/jsonabc@^2.3.1":
-  version "2.3.1"
-  resolved "https://registry.npmjs.org/@types/jsonabc/-/jsonabc-2.3.1.tgz"
-  integrity sha512-SOR8DMQQVUmk3JnNp7FU75U+vp/VcFcghvS68mUQEuq4FKDANIQ9dxDA5qEQMDahBCd5Vyhk81ywn0JbcLpZZw==
+"@types/jsonabc@^2.3.3":
+  version "2.3.3"
+  resolved "https://registry.yarnpkg.com/@types/jsonabc/-/jsonabc-2.3.3.tgz#a5d6cbb31d6843955c5087a93140035e9260b6b6"
+  integrity sha512-TnsXd4l4X65GsPakQjGLMQ4SqVXrVsvfzpO+0WqNxF8HLiiKA32aFD6Mas+9zjB3TScRIMhCDnkux/gm0674mg==
 
 "@types/node@*", "@types/node@^26.0.1":
   version "26.0.1"
