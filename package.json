@@ -58,6 +58,11 @@
     "type": "git",
     "url": "git+https://github.com/bennycode/sort-everything.git"
   },
+  "resolutions": {
+    "ajv": "^8.20.0",
+    "test-exclude/glob/minimatch": "^3.1.5",
+    "test-exclude/minimatch": "^3.1.5"
+  },
   "scripts": {
     "compile": "webpack",
     "fix": "biome check --write",
