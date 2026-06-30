@@ -30,7 +30,7 @@
   "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
     "@types/jest": "^30.0.0",
-    "@types/node": "^24.13.2",
+    "@types/node": "^26.0.1",
     "@types/vscode": "^1.68.0",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
