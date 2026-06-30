@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v6
         with:
-          node-version: 18
+          node-version-file: '.nvmrc'
       - name: 'Install dependencies'
         run: |
           yarn global add @vscode/vsce
