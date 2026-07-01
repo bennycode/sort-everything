@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@types/jsonabc": "^2.3.3",
-    "comment-json": "4.2.5",
+    "comment-json": "5.0.0",
     "json5": "^2.2.3",
     "jsonabc": "^2.3.1",
     "yaml": "^2.9.0"
