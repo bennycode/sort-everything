@@ -26,7 +26,7 @@
   },
   "description": "Sort JSON, YAML and plain text files by using a keyboard shortcut.",
   "devDependencies": {
-    "@biomejs/biome": "2.5.1",
+    "@biomejs/biome": "2.5.11",
     "@types/jest": "^30.0.0",
     "@types/node": "^26.0.1",
     "@types/vscode": "^1.68.0",
